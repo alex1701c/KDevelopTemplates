@@ -1,0 +1,13 @@
+[General]
+# See https://techbase.kde.org/KDevelop5/File_template_specification for documentation
+Name=Desktop File
+Comment=A simple .desktop file for an application
+Category=Utility/Desktop
+Type=File
+Language=Text
+Files=DESKTOP_FILE
+
+[DESKTOP_FILE]
+Name=Desktop File
+File=template.desktop
+OutputFile={{ name }}.desktop

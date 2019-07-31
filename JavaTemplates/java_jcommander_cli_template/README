@@ -1,0 +1,7 @@
+This project uses Maven and the JCommander libary.
+
+To run/build/install the project you can use the scripts from the Makerfile.
+
+If you want to pass in commands to the program you can type:    make start args="<my_arguments>"
+
+Tip: If you want to start the file using ./filename.jar you can install the jarwrapper package.

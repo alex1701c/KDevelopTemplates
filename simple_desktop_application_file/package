@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# This automatically updates/installs the template in your local templates folder
+if [[ $(basename "$PWD") == "simple_desktop_application_file" ]];then
+    mkdir -p build
+    rm -rf build/*
+    cd build
+    cmake ..
+    make
+    cp ../simple_desktop_application_file/simple_desktop_application_file.desktop ~/.local/share/kdevfiletemplates/template_descriptions/
+    cp simple_desktop_application_file.tar.bz2 ~/.local/share/kdevfiletemplates/templates/
+else
+    echo "Please go to the project root"
+fi

@@ -1,0 +1,5 @@
+[General]
+Name=JavaFX Application With Maven and FXML
+Comment=Setup with files and build scripts for a JavaFX application with the Maven architecture.
+Category=Java/JavaFX
+Icon=application-x-java

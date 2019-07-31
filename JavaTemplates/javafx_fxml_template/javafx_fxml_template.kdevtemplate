@@ -1,0 +1,5 @@
+[General]
+Name=JavaFX Application with FXML
+Comment=A Hello World JavaFX Application which uses FXML and MVC Design Pattern
+Category=Java/JavaFX
+Icon=application-x-java

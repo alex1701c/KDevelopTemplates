@@ -1,0 +1,13 @@
+/.idea
+/.metadata
+/target
+/.settings
+/dist
+/.vscode
+/out
+/build
+/bin
+/.kdev4
+.classpath
+.factorypath
+.project

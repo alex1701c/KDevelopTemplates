@@ -1,0 +1,9 @@
+/build
+/.idea
+/.vscode
+/*/.vscode
+/*/*/.vscode
+/cmake-build-debug
+/target
+*.swap
+.directory

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile arg="true"/>
+    <group name="Lifecycle Methods">
+        <entry name="package" type="String">
+            <label>Package</label>
+            <default>none</default>
+        </entry>
+        <entry name="before_all_method" type="Bool">
+            <label>@BeforeAll</label>
+            <default>true</default>
+        </entry>
+        <entry name="before_each_method" type="Bool">
+            <label>@BeforeEach</label>
+            <default>true</default>
+        </entry>
+        <entry name="after_all_method" type="Bool">
+            <label>@AfterAll</label>
+            <default>true</default>
+        </entry>
+        <entry name="after_each_method" type="Bool">
+            <label>@AfterEach</label>
+            <default>true</default>
+        </entry>
+    </group>
+</kcfg>

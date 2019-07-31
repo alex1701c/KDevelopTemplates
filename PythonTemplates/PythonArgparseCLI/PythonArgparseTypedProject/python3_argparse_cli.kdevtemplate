@@ -1,0 +1,4 @@
+[General]
+Name=Typed CLI Template
+Comment=Typed Template for command line application with Python3 and argparse
+Category=Python/Terminal

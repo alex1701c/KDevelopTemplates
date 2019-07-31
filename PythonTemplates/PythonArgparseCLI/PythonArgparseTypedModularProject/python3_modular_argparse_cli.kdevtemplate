@@ -1,0 +1,4 @@
+[General]
+Name=Modular Python CLI
+Comment=This is a typed template for command line application with Python3 and argparse. Additionally it is organized in modules, has a setup.py and build scripts configured.
+Category=Python/Terminal

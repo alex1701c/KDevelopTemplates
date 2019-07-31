@@ -1,0 +1,7 @@
+This template used Maven, JavaFX and TestFX.
+
+You can run the project with your IDE of choice or in the command line (maven package is required)
+
+Additionally this project has a headless test setup for the TestFX library.
+
+Tip: If you want to start the file using ./filename.jar you can install the jarwrapper package.

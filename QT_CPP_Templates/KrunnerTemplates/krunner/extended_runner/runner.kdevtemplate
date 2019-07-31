@@ -1,0 +1,6 @@
+# KDE Config File
+[General]
+Name=Extended Runner Template
+Comment=Extended Plasma Runner Template. A plasma runner template
+Category=Plasma/KRunner
+Icon=planetkde

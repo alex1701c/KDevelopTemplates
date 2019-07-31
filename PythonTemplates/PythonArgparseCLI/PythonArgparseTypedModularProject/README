@@ -1,0 +1,16 @@
+This project uses modules and a setup.py file to build your app.
+
+To run the project have to type:
+python3 -m %{APPNAMELC}.__main__
+
+To install/build the project you can use the scripts in the Makefile
+(make sure that you have the setup.py file parameters edited).
+
+This requires:
+sudo apt install debhelper python3 python3-pip python3-all
+pip3 install stdeb setuptools pyinstaller --user
+
+Snap packaging requires:
+Snap to be installed end enabled,
+sudo snap install snapcraft --clasic
+sudo snap install multipass --beta --classic

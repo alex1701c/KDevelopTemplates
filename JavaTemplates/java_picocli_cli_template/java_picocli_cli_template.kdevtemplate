@@ -1,0 +1,5 @@
+[General]
+Name=Java CLI using Picocli
+Comment=Setup with files and build scripts for a CLI with Picocli and the Maven architecture. The Makefile also has a command to generate the autocompletion file implemented.
+Category=Java/Terminal
+Icon=application-x-java

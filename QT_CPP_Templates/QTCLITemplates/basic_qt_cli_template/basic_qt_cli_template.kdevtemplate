@@ -1,0 +1,5 @@
+[General]
+Name=Basic CLI with Qt
+Comment=Basic CLI with the Qt CommandLineParser
+Category=Qt/Terminal
+Icon=qtcreator

@@ -1,0 +1,5 @@
+[General]
+Name=Java CLI Using Apache Commons
+Comment=Setup with files and build scripts for a CLI with Apache Commons and the Maven architecture.
+Category=Java/Terminal
+Icon=application-x-java

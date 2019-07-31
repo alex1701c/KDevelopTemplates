@@ -1,0 +1,24 @@
+# Ignore the following files
+*~
+*.[oa]
+*.diff
+*.kate-swp
+*.kdev4
+.kdev_include_paths
+*.kdevelop.pcs
+*.moc
+*.moc.cpp
+*.orig
+*.user
+.*.swp
+.swp.*
+Doxyfile
+avail
+random_seed
+/build*/
+CMakeLists.txt.user*
+*.unc-backup*
+/.vscode
+/.idea
+.directory
+/cmake-build-debug

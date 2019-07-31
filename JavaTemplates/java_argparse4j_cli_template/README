@@ -1,0 +1,7 @@
+This project uses Maven and the Argparse4j library.
+
+To run/build/install the project you can use the scripts from the Makerfile, this requires you to have Maven installed.
+
+If you want to pass in commands to the program you can type:    make start args="<my_arguments>"
+
+Tip: If you want to start the file using ./filename.jar you can install the jarwrapper package.

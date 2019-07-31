@@ -1,0 +1,5 @@
+[General]
+Name=Java Maven Project
+Comment=An empty Java project with Maven and configured tasks for running/testings/building the application.
+Category=Java/Empty
+Icon=application-x-java

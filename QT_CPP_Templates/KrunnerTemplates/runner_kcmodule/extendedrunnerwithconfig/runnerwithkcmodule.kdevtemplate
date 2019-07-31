@@ -1,0 +1,5 @@
+[General]
+Name=Extended Runner Template With Config
+Comment=Extended Plasma Runner Template. A plasma runner template which includes a KCModule
+Category=Plasma/KRunner
+Icon=planetkde

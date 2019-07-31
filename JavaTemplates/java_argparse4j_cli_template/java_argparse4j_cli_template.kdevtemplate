@@ -1,0 +1,5 @@
+[General]
+Name=Java CLI Using Argpparse4j
+Comment=Setup with files and build scripts for a CLI with Argpparse4j and the Maven architecture.
+Category=Java/Terminal
+Icon=application-x-java

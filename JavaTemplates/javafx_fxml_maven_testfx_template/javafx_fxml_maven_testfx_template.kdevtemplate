@@ -1,0 +1,5 @@
+[General]
+Name=JavaFX App With Maven and Testing
+Comment=Setup with files and build scripts for a JavaFX application with the Maven architecture and headless TestFX testing.
+Category=Java/JavaFX
+Icon=application-x-java

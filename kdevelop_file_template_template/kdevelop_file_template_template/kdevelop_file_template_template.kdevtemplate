@@ -1,0 +1,5 @@
+[General]
+Name=KDevelop File Template
+Comment=This template sets up your custom KDevelop file template which is packaged using CMake. Additionally it contains a package script that packages and updates the template in your local folder.
+Category=KDevelop/Template
+ShowFilesAfterGeneration=%{APPNAMELC}/%{APPNAMELC}.desktop

@@ -1,0 +1,5 @@
+This template used Maven and JavaFX.
+
+You can run the project with your IDE of choice or in the command line (maven package is required).
+
+Tip: If you want to start the file using ./filename.jar you can install the jarwrapper package.

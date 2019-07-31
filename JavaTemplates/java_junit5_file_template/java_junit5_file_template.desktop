@@ -1,0 +1,13 @@
+[General]
+Name=JUnit5 Template
+Comment=Basic JUnit5 Test Template
+Category=Java/Test
+Type=Test
+Language=Java
+Files=Test
+OptionsFile=options.kcfg
+
+[Test]
+Name=JUnit5 Test
+File=java_junit5_file_template.java
+OutputFile={{ name }}Test.java

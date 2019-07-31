@@ -1,0 +1,5 @@
+[General]
+Name=Java CLI Using JCommander
+Comment=Setup with files and build scripts for a CLI with JCommander and the Maven architecture.
+Category=Java/Terminal
+Icon=application-x-java

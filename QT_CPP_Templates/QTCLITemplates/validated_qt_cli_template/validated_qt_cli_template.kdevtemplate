@@ -1,0 +1,5 @@
+[General]
+Name=Qt CLI with validation
+Comment=A CLI with the QCommandLineParser and validation setup
+Category=Qt/Terminal
+Icon=qtcreator
