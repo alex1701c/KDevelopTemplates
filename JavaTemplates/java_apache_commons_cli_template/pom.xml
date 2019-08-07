@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.author.project</groupId>
-    <artifactId>project</artifactId>
+    <groupId>org.%{AUTHOR}.%{APPNAMELC}</groupId>
+    <artifactId>%{APPNAMELC}</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
@@ -32,7 +32,7 @@
                     <target>8</target>
                 </configuration>
             </plugin>
-             <!--Execute main using mvn tasks compile, exec:java-->
+            <!--Execute main using mvn tasks compile, exec:java-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
