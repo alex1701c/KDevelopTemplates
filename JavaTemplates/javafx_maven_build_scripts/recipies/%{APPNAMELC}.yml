@@ -1,0 +1,14 @@
+app: %{APPNAME}
+
+script:
+  - cp -r ../../target/jfx/native/%{APPNAMELC}-1.0/*  usr/bin
+  - cp ../../java.png  usr/share/icons/java.png
+  - cat > %{APPNAMELC}.desktop <<\EOF
+  - [Desktop Entry]
+  - Type=Application
+  - Name=My Java App
+  - Icon=/usr/share/icons/java
+  - Exec=%{APPNAMELC}-1.0
+  - Categories=Utility;
+  - EOF
+  - chmod +x  usr/bin/%{APPNAMELC}-1.0

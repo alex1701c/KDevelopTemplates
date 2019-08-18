@@ -1,0 +1,5 @@
+[General]
+Name=JavaFX With Maven, Testing, Build Scripts
+Comment=Setup with files for a JavaFX application with the Maven architecture, headless TestFX testing and build scripts for: Jar, AppImage, Deb, Rpm.
+Category=Java/JavaFX
+Icon=application-x-java

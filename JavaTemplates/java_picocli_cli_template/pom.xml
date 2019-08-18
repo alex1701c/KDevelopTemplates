@@ -91,6 +91,14 @@
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.1.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
@@ -103,6 +111,57 @@
                         </manifest>
                     </archive>
                 </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>jdeb</artifactId>
+                <groupId>org.vafer</groupId>
+                <version>1.7</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jdeb</goal>
+                        </goals>
+                        <configuration>
+                            <deb>${project.build.directory}/${project.artifactId}_${project.version}.deb</deb>
+                            <verbose>true</verbose>
+                            <snapshotExpand>true</snapshotExpand>
+                            <!-- expand "SNAPSHOT" to what is in the "USER" env variable -->
+                            <snapshotEnv>USER</snapshotEnv>
+                            <verbose>true</verbose>
+                            <controlDir>${basedir}/src/deb/control</controlDir>
+                            <dataSet>
+                                <!-- Use file from assembly:single task -->
+                                <data>
+                                    <src>
+                                        ${project.build.directory}/${project.build.finalName}-jar-with-dependencies.jar
+                                    </src>
+                                    <type>file</type>
+                                    <dst>%{APPNAMELC}.jar</dst>
+                                    <mapper>
+                                        <type>perm</type>
+                                        <prefix>/usr/share/java</prefix>
+                                        <user>loader</user>
+                                        <group>loader</group>
+                                        <filemode>755</filemode>
+                                    </mapper>
+                                </data>
+                                <!-- Include command line launch script -->
+                                <data>
+                                    <src>${project.basedir}/src/deb/install/%{APPNAMELC}</src>
+                                    <type>file</type>
+                                    <mapper>
+                                        <type>perm</type>
+                                        <prefix>/usr/bin</prefix>
+                                        <user>loader</user>
+                                        <group>loader</group>
+                                        <filemode>755</filemode>
+                                    </mapper>
+                                </data>
+                            </dataSet>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

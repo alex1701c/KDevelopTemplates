@@ -1,0 +1,7 @@
+This template used Maven, JavaFX and TestFX.
+
+Additionally it has build scripts for deb, rpm, app images and executable jars configured.
+
+Note: The app image build script uses the generated files from the "mvn jfx:native" command.
+
+The script pkg2appimage if from: https://github.com/AppImage/pkg2appimage/blob/master/pkg2appimage

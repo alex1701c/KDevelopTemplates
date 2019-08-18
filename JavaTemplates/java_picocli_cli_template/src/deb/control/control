@@ -1,0 +1,8 @@
+Package: %{APPNAME}
+Version: 1.0.0
+Section: misc
+Priority: low
+Architecture: all
+Description: [[description]]
+Maintainer: %{AUTHOR}
+Depends: default-jre
