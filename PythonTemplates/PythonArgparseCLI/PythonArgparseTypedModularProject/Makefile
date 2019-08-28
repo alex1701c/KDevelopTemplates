@@ -3,7 +3,7 @@ deb-package:
 snap-package:
 	snapcraft
 standalone:
-	echo "from  %{APPNAMELC}.run import main; main()" > main.py
+	echo "from  %{APPNAMELC}.main import main; main()" > main.py
 	PYTHONOPTIMIZE=1 pyinstaller main.py -F -n %{APPNAMELC} --distpath dist/
 	rm main.py
 py-install:
