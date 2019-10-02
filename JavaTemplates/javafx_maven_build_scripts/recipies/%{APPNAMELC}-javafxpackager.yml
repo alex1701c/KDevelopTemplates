@@ -6,7 +6,7 @@ script:
   - cat > %{APPNAMELC}.desktop <<\EOF
   - [Desktop Entry]
   - Type=Application
-  - Name=My Java App
+  - Name=%{APPNAME}
   - Icon=/usr/share/icons/java
   - Exec=%{APPNAMELC}-1.0
   - Categories=Utility;
