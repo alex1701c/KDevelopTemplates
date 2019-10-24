@@ -12,6 +12,8 @@
     </properties>
     <dependencies>
         <!-- General dependencies -->
+        <!-- Demo dependency,
+         you can remove this after you refactor the references in the Controller.java, sample.fxml and MainTest.java -->
         <dependency>
             <groupId>com.jfoenix</groupId>
             <artifactId>jfoenix</artifactId>
@@ -22,7 +24,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
+            <version>1.18.10</version>
             <scope>provided</scope>
         </dependency>
         <!-- JavaFX Dependencies for jdk 11-->
@@ -51,39 +53,37 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.5.1</version>
+            <version>5.5.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
-            <version>5.5.1</version>
+            <version>5.5.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.5.1</version>
+            <version>5.5.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.testfx</groupId>
             <artifactId>testfx-core</artifactId>
-            <version>4.0.15-alpha</version>
+            <version>4.0.16-alpha</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.testfx</groupId>
             <artifactId>testfx-junit5</artifactId>
-            <version>jdk-11+26</version>
-            <!-- Java 8 compatible version-->
-            <!--<version>4.0.15-alpha</version>-->
+            <version>4.0.16-alpha</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <version>5.5.1</version>
+            <version>5.5.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -127,6 +127,7 @@
                     <mainClass>main.Main</mainClass>
                 </configuration>
             </plugin>
+            <!-- Build executable jar file with all dependencies -->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.1.1</version>
@@ -144,6 +145,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
+                            <!-- Call launcher instead of Main, otherwise it causes issues -->
                             <mainClass>main.Launcher</mainClass>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
@@ -151,7 +153,7 @@
                     </archive>
                 </configuration>
             </plugin>
-            <!-- Requires global JRE -->
+            <!-- Requires globally installed JRE -->
             <plugin>
                 <artifactId>jdeb</artifactId>
                 <groupId>org.vafer</groupId>

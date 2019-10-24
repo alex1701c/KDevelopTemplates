@@ -1,17 +1,28 @@
 app: %{APPNAME}
 
 script:
-  - tar xf  ../../openjdk-11-jre.tar.xz
+  # Download JRE, replace with own script if you are not on a Debian based distro
+  - apt download openjdk-11-jre-headless
+  - mv openjdk-11-jre-headless*.deb openjdk-11-jre-headless.deb
+  - ar vx openjdk-11-jre-headless.deb
+  - rm control.tar.xz  debian-binary openjdk-11-jre-headless.deb
+  - tar xf  data.tar.xz
+  - ln -s ./lib/jvm/java-11-openjdk-amd64/bin/java usr/java
+  # Copy icon, create folders
   - cp ../../java.png  usr/share/icons/java.png
   - mkdir -p usr/lib/java/
+  # Copy jar file and make java executable
   - cp ../../target/%{APPNAMELC}-*-jar-with-dependencies.jar  usr/%{APPNAMELC}.jar
   - chmod +x usr/lib/jvm/java-11-openjdk-amd64/bin/java
+  # Create Desktop Entry to launch application
+  - echo "./lib/jvm/java-11-openjdk-amd64/bin/java -jar %{APPNAMELC}.jar" > usr/bin/launcher
+  - chmod +x usr/bin/launcher
   - cat > %{APPNAMELC}.desktop <<\EOF
   - [Desktop Entry]
   - Type=Application
   - Name=%{APPNAME}
   - Icon=/usr/share/icons/java
-  - Exec=./lib/jvm/java-11-openjdk-amd64/bin/java -jar %{APPNAMELC}.jar
+  - Exec=launcher
   - Categories=Utility;
   - EOF
 
