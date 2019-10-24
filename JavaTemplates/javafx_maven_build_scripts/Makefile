@@ -3,6 +3,7 @@ start:
 test:
 	mvn test
 clean:
+	# Deletes compile output and AppImage folder
 	rm -rf target/*
 	rm -rf %{APPNAME}/*
 package-javafxpackager:

@@ -2,8 +2,9 @@ This template used Maven, JavaFX and TestFX.
 
 Additionally it has build scripts for deb, rpm, app images and executable jars configured.
 
-It is also compatible with oracle jdk 8 and any higher versions <=11.
+It is also compatible with oracle jdk 8 and any higher versions <=11 if you adjust the dependencies
+in the pom.xml file.
 
-Note: Hello :-)
+Note: The JFoenix library is just for demo purposes included.
 
 The script pkg2appimage if from: https://github.com/AppImage/pkg2appimage/blob/master/pkg2appimage
