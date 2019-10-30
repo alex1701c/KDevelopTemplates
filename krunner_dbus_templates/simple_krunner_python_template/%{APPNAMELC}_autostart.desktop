@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Runner
+Comment=Autostart entry for a Krunner plugin
+Keywords=Runner;Krunner
+Categories=Utilities
+Exec=python3 "%{Folder_LOCATION}/Runner.py"
+Icon=python
+StartupNotify=true
