@@ -2,6 +2,8 @@
 /*/build
 /*/*/build
 /.idea
+/*/.idea
+/*/*/.idea
 /.vscode
 /*/.vscode
 /*/*/.vscode

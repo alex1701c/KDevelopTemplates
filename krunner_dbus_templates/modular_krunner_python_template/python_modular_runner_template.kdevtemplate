@@ -1,0 +1,4 @@
+[General]
+Name=Modular Python KRunner Plugin
+Comment=Template for a more complex KRunner plugin that is organized in modules
+Category=Plasma/KRunner

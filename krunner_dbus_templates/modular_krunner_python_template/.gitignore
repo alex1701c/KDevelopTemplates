@@ -1,0 +1,14 @@
+/build
+/.idea
+/.kdev4
+/.vscode
+/PythonModularKrunner.egg-info
+/PythonModularKrunner-*.tar.gz
+/build
+/dist
+/deb_dist
+/__pycache__
+/*/__pycache__
+/*/*/__pycache__
+run.spec
+*.snap

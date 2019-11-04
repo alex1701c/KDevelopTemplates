@@ -11,5 +11,8 @@ include(KDEPackageAppTemplates)
 set(simple_krunner_python_template_DIRS
         simple_krunner_python_template
 )
-
+set(modular_krunner_python_template_DIRS
+        modular_krunner_python_template
+)
 kde_package_app_templates(TEMPLATES ${simple_krunner_python_template_DIRS} INSTALL_DIR ${KDE_INSTALL_KTEMPLATESDIR})
+kde_package_app_templates(TEMPLATES ${modular_krunner_python_template_DIRS} INSTALL_DIR ${KDE_INSTALL_KTEMPLATESDIR})

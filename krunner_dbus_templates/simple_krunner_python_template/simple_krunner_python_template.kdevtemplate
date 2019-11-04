@@ -1,4 +1,4 @@
 [General]
-Name=Basic Python Krunner Plugin
-Comment=Template for a basic krunner python plugin using dbus
-Category=Plasma/Krunner
+Name=Basic Python KRunner Plugin
+Comment=Template for a basic KRunner python plugin using dbus
+Category=Plasma/KRunner

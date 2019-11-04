@@ -1,0 +1,22 @@
+app: %{APPNAME}
+
+script:
+  # Create custom JRE using required only modules => optimized file size
+  - jlink --add-modules java.base --output usr/jre
+  # Copy icon, create folders
+  - cp ../../java.png  usr/share/icons/java.png
+  - cp ../../target/%{APPNAMELC}-*-jar-with-dependencies.jar  usr/%{APPNAMELC}.jar
+  # Create Desktop Entry to launch application
+  - echo "./bin/java -jar %{APPNAMELC}.jar" > usr/bin/launcher
+  - cat > usr/bin/launcher <<\EOF
+  - ./jre/bin/java -jar  %{APPNAMELC}.jar $@
+  - EOF
+  - chmod +x usr/bin/launcher
+  - cat > %{APPNAMELC}.desktop <<\EOF
+  - [Desktop Entry]
+  - Type=Application
+  - Name=%{APPNAME}
+  - Icon=/usr/share/icons/java
+  - Exec=launcher
+  - Categories=Utility;
+  - EOF

@@ -17,14 +17,15 @@ class Runner(dbus.service.Object):
 
     @dbus.service.method(iface, in_signature='s', out_signature='a(sssida{sv})')
     def Match(self, query: str):
+        """This method is used to get the matches and it returns a list of lists/tupels"""
         if query == "hello":
-            # action text, display name, icon, type (Plasma::QueryType), relevance (0-1), properties (subtext, category and urls)
+            # data, display text, icon, type (Plasma::QueryType), relevance (0-1), properties (subtext, category and urls)
             return [("Hello", "Hello from %{APPNAME}!", "document-edit", 100, 1.0, {'subtext': 'Demo Subtext'})]
         return []
 
     @dbus.service.method(iface, in_signature='ss')
-    def Run(self, match_id: str, _action_id: str):
-        print(match_id)
+    def Run(self, data: str, _action_id: str):
+        print(data)
 
 
 runner = Runner()
