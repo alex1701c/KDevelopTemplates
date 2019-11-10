@@ -1,9 +1,9 @@
 [Desktop Entry]
 Categories=Application;
 Comment=Just a hello world project
-Exec=/usr/lib/jvm/java-11-openjdk-amd64/bin/java -jar /usr/share/java/mycooljavadebpackage.jar
+Exec=/usr/lib/jvm/java-11-openjdk-amd64/bin/java -jar /usr/share/java/%{APPNAMELC}.jar
 GenericName=My Java Application
 Icon=application-x-java
-Name= My Cool Java App
+Name=%{APPNAME}
 Type=Application
 Version=1.0

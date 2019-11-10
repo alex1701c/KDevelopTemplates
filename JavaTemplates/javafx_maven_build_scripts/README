@@ -1,6 +1,6 @@
 This template used Maven, JavaFX and TestFX.
 
-Additionally it has build scripts for deb, rpm, app images and executable jars configured.
+Additionally it has build scripts for deb, rpm, app images, snap and executable jars configured.
 
 It is also compatible with oracle jdk 8 and any higher versions <=11 if you adjust the dependencies
 in the pom.xml file.
@@ -8,3 +8,13 @@ in the pom.xml file.
 Note: The JFoenix library is just for demo purposes included.
 
 The script pkg2appimage if from: https://github.com/AppImage/pkg2appimage/blob/master/pkg2appimage
+
+
+
+Snap packaging requires:
+Snap to be installed end enabled,
+sudo snap install snapcraft --clasic
+sudo snap install multipass --beta --classic
+
+If you have these programs set up you can run "snapcraft" to build your snap package
+and then "sudo snap install MY_PROJECT.snap --devmode "

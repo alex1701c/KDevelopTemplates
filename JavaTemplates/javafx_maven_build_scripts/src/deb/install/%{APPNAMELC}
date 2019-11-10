@@ -1,3 +1,3 @@
 #!/bin/sh
 
-/usr/lib/jvm/java-11-openjdk-amd64/bin/java -jar /usr/share/java/mycooljavadebpackage.jar
+/usr/lib/jvm/java-11-openjdk-amd64/bin/java -jar /usr/share/java/%{APPNAMELC}.jar
