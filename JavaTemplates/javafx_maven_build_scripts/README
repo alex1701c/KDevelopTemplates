@@ -9,7 +9,7 @@ Note: The JFoenix library is just for demo purposes included.
 
 The script pkg2appimage if from: https://github.com/AppImage/pkg2appimage/blob/master/pkg2appimage
 
-
+The RPM package config is based on: http://www.mojohaus.org/rpm-maven-plugin/example1.html
 
 Snap packaging requires:
 Snap to be installed end enabled,

@@ -15,6 +15,6 @@ package-appimage:
 	mvn compile assembly:single
 	./pkg2appimage recipies/%{APPNAMELC}-java11openjdk.yml
 	cd ./%{APPNAME} && ./appimagetool %{APPNAME}.AppDir/
-package-jar-deb:
+package:
 	# Builds standalone jar and deb package
 	mvn compile package

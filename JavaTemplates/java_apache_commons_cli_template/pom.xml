@@ -66,6 +66,7 @@
                     </archive>
                 </configuration>
             </plugin>
+            <!-- Gets automatically executed in mvn package command -->
             <plugin>
                 <artifactId>jdeb</artifactId>
                 <groupId>org.vafer</groupId>
@@ -116,6 +117,58 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <!-- Gets automatically executed in mvn package command -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>rpm-maven-plugin</artifactId>
+                <version>2.2.0</version>
+                <executions>
+                    <execution>
+                        <id>generate-rpm</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>rpm</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <license>GPL (c) 2005, SWWDC</license>
+                    <distribution>Trash 2005</distribution>
+                    <group>Application/Utilities</group>
+                    <packager>SWWDC</packager>
+                    <defineStatements>
+                        <defineStatement>_unpackaged_files_terminate_build 0</defineStatement>
+                    </defineStatements>
+                    <requires>
+                        <require>java-11-openjdk</require>
+                    </requires>
+                    <mappings>
+                        <mapping>
+                            <directory>/usr/local/bin</directory>
+                            <filemode>755</filemode>
+                            <sources>
+                                <!-- Use explicitly java 11 in launch script, other path than in deb packages-->
+                                <source>
+                                    <location>${project.basedir}/src/deb/install/%{APPNAMELC}_rpm</location>
+                                    <destination>%{APPNAMELC}</destination>
+                                </source>
+                            </sources>
+                        </mapping>
+                        <mapping>
+                            <directory>/usr/share/java</directory>
+                            <configuration>true</configuration>
+                            <filemode>755</filemode>
+                            <sources>
+                                <source>
+                                    <location>${project.build.directory}/${project.build.finalName}-jar-with-dependencies.jar
+                                    </location>
+                                    <destination>%{APPNAMELC}.jar</destination>
+                                </source>
+                            </sources>
+                        </mapping>
+                    </mappings>
+                </configuration>
             </plugin>
         </plugins>
     </build>

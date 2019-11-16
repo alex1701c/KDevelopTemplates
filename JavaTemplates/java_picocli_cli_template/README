@@ -3,4 +3,9 @@ This project uses Maven and the PicoCLI library.
 To run/build/install the project you can use the scripts from the Makerfile, this requires you to have Maven installed.
 If you want to pass in commands to the program you can type:    make start args="<my_arguments>"
 
-Tip: If you want to start the file using ./filename.jar you can install the jarwrapper package.
+The RPM package config is based on: http://www.mojohaus.org/rpm-maven-plugin/example1.html
+
+If the modular AppImage fails to run, you can check with "jdeps --list-deps target/%{APPNAMELC}-1.0-jar-with-dependencies.jar"
+if there are additional modules needed and add them to the recipies/%{APPNAMELC}-java11openjdkmodular.yml file.
+
+Tip: If you want to start the program using ./filename.jar you can install the jarwrapper package.

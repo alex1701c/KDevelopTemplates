@@ -5,4 +5,4 @@ Priority: low
 Architecture: all
 Description: [[description]]
 Maintainer: %{AUTHOR}
-Depends: default-jre
+Depends: openjdk-11-jre
