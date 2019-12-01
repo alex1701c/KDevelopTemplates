@@ -12,5 +12,17 @@ add_executable(${PROJECT_NAME} main.cpp Validator.cpp Validator.h)
 
 target_link_libraries(${PROJECT_NAME} Qt5::Core)
 
-# TODO Replace with your own path
-install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_CURRENT_LIST_DIR}/bin)
+install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+
+# CPack configuration
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Test package")
+set(CPACK_PACKAGE_NAME ${CMAKE_PROJECT_NAME})
+set(CPACK_PACKAGE_VERSION "0.0.1")
+set(CPACK_DEBIAN_PACKAGE_SECTION "utils")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "%{AUTHOR}")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libqt5core5a (>= 5.2)")
+
+set(CPACK_RPM_PACKAGE_ARCHITECTURE "x86_64")
+set(CPACK_RPM_PACKAGE_REQUIRES "qt5-qtbase >= 5.2.0")
+
+INCLUDE(CPack)

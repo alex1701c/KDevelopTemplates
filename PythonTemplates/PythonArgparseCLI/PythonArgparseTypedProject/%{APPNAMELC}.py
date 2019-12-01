@@ -41,7 +41,7 @@ class ArgsNamespace(argparse.Namespace):
 
 """ 
 In addition to the other Python argparse CLI template this one supports type checking. 
-Make sure that your have the Python KDevelop plugin installed.
+Make sure that you have the Python KDevelop plugin installed.
 """
 
 if __name__ == "__main__":

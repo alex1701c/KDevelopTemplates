@@ -7,7 +7,7 @@ from .utilities.ArgsNamespace import ArgsNamespace
 from .utilities.CustomHelpFormatter import CustomHelpFormatter
 
 """ 
-Make sure that your have the Python KDevelop plugin installed.
+Make sure that you have the Python KDevelop plugin installed.
 """
 
 
