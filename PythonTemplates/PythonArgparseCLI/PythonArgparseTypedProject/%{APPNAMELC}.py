@@ -32,8 +32,8 @@ class CustomHelpFormatter(HelpFormatter):
 
 
 class ArgsNamespace(argparse.Namespace):
-    param: str
-    default_false: bool
+    name: str
+    extra: bool
 
     def __init__(self, **kwargs: Any) -> None:
         super().__init__(**kwargs)
@@ -45,12 +45,18 @@ Make sure that you have the Python KDevelop plugin installed.
 """
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Describe your project", formatter_class=partial(CustomHelpFormatter, max_help_position=48, width=400))
-    parser.add_argument('-p', '--param', metavar="<MyParameter>", help='A optional parameter')
-    parser.add_argument('-d', '--default-false', action='store_true', help='This Value is False by default')
+    parser = argparse.ArgumentParser(description='Describe your project', formatter_class=CustomHelpFormatter)
+    parser.add_argument('-v', '--version', action='version', version='%{APPNAMELC} 1.0')
+    parser.add_argument('-n', '--name', metavar='<name>', help='An optional parameter')
+    parser.add_argument('-e', '--extra', action='store_true', help='This Value is False by default')
     args: ArgsNamespace = cast(ArgsNamespace, parser.parse_args())
 
-    if args.default_false:
-        print("You have used the --default-false option !")
+    if args.name and args.extra:
+        print('Hello There ' + args.name + '!')
+    elif args.extra:
+        print('Hello There!')
+    elif args.name:
+        print('Hello ' + args.name + '!')
     else:
-        print("You have not used the --default-false option !")
+        print('Hello World!')
+
