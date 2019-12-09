@@ -5,8 +5,8 @@
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
     <kcfgfile arg="true"/>
     <group name="">
-        <entry name="varname" type="String">
-            <label>Hello</label>
+        <entry name="example" type="String">
+            <label>Example</label>
             <default>:-)</default>
         </entry>
     </group>

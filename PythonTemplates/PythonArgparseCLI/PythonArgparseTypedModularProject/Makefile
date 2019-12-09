@@ -9,7 +9,7 @@ standalone:
 py-install:
 	python3 setup.py install --user
 py-bundle:
-	# Bundles all the project files into a copresses, executable file. No interpreter or libraies included
+	# Bundles all the project files into a compressed, executable file. No interpreter or libraies included
 	rm -rf tmp
 	mkdir -p tmp
 	# Copy files recrusively and reserve attributes

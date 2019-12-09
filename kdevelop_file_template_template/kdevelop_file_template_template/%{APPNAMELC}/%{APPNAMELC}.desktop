@@ -2,13 +2,13 @@
 # See https://techbase.kde.org/KDevelop5/File_template_specification for documentation
 Name=%{APPNAME}
 Comment=
-Category=
-Type=Test
-Language=
+Category=MyCategory/Subcategory
+Type=Class
+Language=MyProgrammingLanguage
 Files=MYFILE
 OptionsFile=options.kcfg
 
 [MYFILE]
-Name=
-File=
-OutputFile={{ name }}.EXT
+Name=Demo File
+File=DemoFile.txt
+OutputFile={{ name }}.txt

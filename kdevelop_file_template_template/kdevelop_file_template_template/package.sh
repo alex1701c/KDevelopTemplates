@@ -1,5 +1,8 @@
 #!/bin/bash
 
+mkdir -p ~/.local/share/kdevfiletemplates/template_descriptions/
+mkdir -p ~/.local/share/kdevfiletemplates/templates/
+
 # This automatically updates/installs the template in your local templates folder
 if [[ $(basename "$PWD") == "%{PROJECTDIRNAME}" ]];then
     mkdir -p build

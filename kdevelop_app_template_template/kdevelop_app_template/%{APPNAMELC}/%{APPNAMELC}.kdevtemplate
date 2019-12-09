@@ -1,5 +1,5 @@
 [General]
 Name=%{APPNAME}
-Comment=
-Category=
+Comment=A short comment...
+Category=Category/Subcategory
 Icon=planetkde
