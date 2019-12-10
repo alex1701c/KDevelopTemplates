@@ -24,6 +24,7 @@ public Q_SLOTS:
     void defaults() override;
 
 private:
+    KConfigGroup config;
     %{APPNAME}ConfigForm *m_ui;
 
 };

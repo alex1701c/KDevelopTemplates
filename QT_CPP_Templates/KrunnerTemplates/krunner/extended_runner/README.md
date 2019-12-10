@@ -19,7 +19,7 @@ Afterwards you can remove this message.
 cd /path/to/%{APPNAME}
 mkdir build
 cd build
-cmake -DQT_PLUGIN_INSTALL_DIR=`kf5-config --qt-plugins` ..
+cmake -DQT_PLUGIN_INSTALL_DIR=`kf5-config --qt-plugins` -DCMAKE_BUILD_TYPE=Release ..
 make
 sudo make install
 ```

@@ -16,7 +16,8 @@ K_PLUGIN_FACTORY(%{APPNAME}ConfigFactory, registerPlugin<%{APPNAME}Config>("kcm_
 
     // TODO connect signals
 
-    load();
+    // Open config file
+    config = KSharedConfig::openConfig("krunnerrc")->group("Runners").group("%{APPNAMELC}");
 }
 
 void %{APPNAME}Config::load() {

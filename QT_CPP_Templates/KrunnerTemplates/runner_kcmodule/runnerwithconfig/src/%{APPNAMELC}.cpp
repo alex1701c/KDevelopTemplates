@@ -10,13 +10,20 @@
     setObjectName(QStringLiteral("%{APPNAME}"));
 }
 
-%{APPNAME}::~%{APPNAME}()
-{
+%{APPNAME}::~%{APPNAME}() {
 }
 
+void %{APPNAME}::init() {
+    reloadConfiguration();
+}
 
-void %{APPNAME}::match(Plasma::RunnerContext &context)
-{
+void %{APPNAME}::reloadConfiguration() {
+    // Open config file from ~/.config/krunnerrc and the group [Runners][%{APPNAMELC}]
+    KConfigGroup configGroup = config();
+    configGroup.writeEntry("test", "Hello There!");
+}
+
+void %{APPNAME}::match(Plasma::RunnerContext &context) {
     if(!context.isValid()) return;
     const QString term = context.query();
     if (term.length() < 3) {
@@ -28,12 +35,11 @@ void %{APPNAME}::match(Plasma::RunnerContext &context)
     match.setIconName("kdeapp");
     match.setText("Hello World!");
     matches.append(match);
-    
+
     context.addMatches(matches);
 }
 
-void %{APPNAME}::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
-{
+void %{APPNAME}::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) {
     Q_UNUSED(context)
     Q_UNUSED(match)
 

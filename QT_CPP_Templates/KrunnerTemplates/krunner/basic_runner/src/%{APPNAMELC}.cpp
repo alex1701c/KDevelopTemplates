@@ -4,18 +4,19 @@
 #include <KLocalizedString>
 
 %{APPNAME}::%{APPNAME}(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args)
-{
+    : Plasma::AbstractRunner(parent, args) {
     setObjectName(QStringLiteral("%{APPNAME}"));
+
+    QList<Plasma::RunnerSyntax> syntaxes;
+    syntaxes.append(Plasma::RunnerSyntax("query", "Explain query"));
+    setSyntaxes(syntaxes);
 }
 
-%{APPNAME}::~%{APPNAME}()
-{
+%{APPNAME}::~%{APPNAME}() {
 }
 
 
-void %{APPNAME}::match(Plasma::RunnerContext &context)
-{
+void %{APPNAME}::match(Plasma::RunnerContext &context) {
     if(!context.isValid()) return;
     const QString term = context.query();
     if (term.length() < 3) {
@@ -27,12 +28,11 @@ void %{APPNAME}::match(Plasma::RunnerContext &context)
     match.setIconName("kdeapp");
     match.setText("Hello World!");
     matches.append(match);
-    
+
     context.addMatches(matches);
 }
 
-void %{APPNAME}::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
-{
+void %{APPNAME}::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) {
     Q_UNUSED(context)
     Q_UNUSED(match)
 

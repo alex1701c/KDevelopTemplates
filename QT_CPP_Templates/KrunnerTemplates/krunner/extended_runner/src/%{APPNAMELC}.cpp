@@ -5,9 +5,15 @@
 #include <QDebug>
 
 %{APPNAME}::%{APPNAME}(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args)
-{
+    : Plasma::AbstractRunner(parent, args) {
     setObjectName(QStringLiteral("%{APPNAME}"));
+
+    QList<Plasma::RunnerSyntax> syntaxes;
+    syntaxes.append(Plasma::RunnerSyntax("query", "Explain query"));
+    setSyntaxes(syntaxes);
+}
+
+%{APPNAME}::~%{APPNAME}() {
 }
 
 void %{APPNAME}::init() {
@@ -16,26 +22,17 @@ void %{APPNAME}::init() {
     connect(this, SIGNAL(teardown()), this, SLOT(matchSessionFinished()));
 }
 
-void %{APPNAME}::prepareForMatchSession()
-{
+void %{APPNAME}::prepareForMatchSession() {
 }
 
-void %{APPNAME}::matchSessionFinished()
-{
+void %{APPNAME}::matchSessionFinished() {
 }
 
-%{APPNAME}::~%{APPNAME}()
-{
-}
 
 void %{APPNAME}::reloadConfiguration() {
-    QList<Plasma::RunnerSyntax> syntaxes;
-    syntaxes.append(Plasma::RunnerSyntax("query", "Explain query"));
-    setSyntaxes(syntaxes);
 }
 
-void %{APPNAME}::match(Plasma::RunnerContext &context)
-{
+void %{APPNAME}::match(Plasma::RunnerContext &context) {
     if(!context.isValid()) return;
     const QString term = context.query();
     if (term.length() < 3) {
@@ -51,8 +48,7 @@ void %{APPNAME}::match(Plasma::RunnerContext &context)
     context.addMatches(matches);
 }
 
-void %{APPNAME}::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
-{
+void %{APPNAME}::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) {
     Q_UNUSED(context)
     Q_UNUSED(match)
 

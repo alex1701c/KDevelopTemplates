@@ -17,9 +17,9 @@ protected Q_SLOTS:
     void matchSessionFinished();
 
 public: // Plasma::AbstractRunner API
+    void reloadConfiguration() override;
     void match(Plasma::RunnerContext &context) override;
     void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
-    void reloadConfiguration() override;
 };
 
 #endif
