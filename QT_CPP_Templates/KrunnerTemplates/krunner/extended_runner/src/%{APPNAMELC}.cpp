@@ -18,8 +18,8 @@
 
 void %{APPNAME}::init() {
     reloadConfiguration();
-    connect(this, SIGNAL(prepare()), this, SLOT(prepareForMatchSession()));
-    connect(this, SIGNAL(teardown()), this, SLOT(matchSessionFinished()));
+    connect(this, &%{APPNAME}::prepare, this, &%{APPNAME}::prepareForMatchSession);
+    connect(this, &%{APPNAME}::teardown, this, &%{APPNAME}::matchSessionFinished);
 }
 
 void %{APPNAME}::prepareForMatchSession() {

@@ -18,8 +18,8 @@
 
 void %{APPNAME}::init() {
     reloadConfiguration();
-    connect(this, SIGNAL(prepare()), this, SLOT(prepareForMatchSession()));
-    connect(this, SIGNAL(teardown()), this, SLOT(matchSessionFinished()));
+    connect(this, &%{APPNAME}::prepare, this, &%{APPNAME}::prepareForMatchSession);
+    connect(this, &%{APPNAME}::teardown, this, &%{APPNAME}::matchSessionFinished);
 }
 
 void %{APPNAME}::reloadConfiguration() {
@@ -35,7 +35,9 @@ void %{APPNAME}::matchSessionFinished() {
 }
 
 void %{APPNAME}::match(Plasma::RunnerContext &context) {
-    if(!context.isValid()) return;
+    if (!context.isValid()) {
+        return;
+    }
 
     const QString term = context.query();
     if (term.length() < 3) {
@@ -47,7 +49,7 @@ void %{APPNAME}::match(Plasma::RunnerContext &context) {
     match.setIconName("kdeapp");
     match.setText("Hello World!");
     matches.append(match);
-    
+
     context.addMatches(matches);
 }
 
