@@ -1,3 +1,4 @@
+//  Licensed under the GNU LESSER GENERAL PUBLIC LICENSE Version 2.1. See License in the project root for license information.
 #include "%{APPNAMELC}.h"
 
 #include <QCoreApplication>
@@ -39,7 +40,7 @@ RemoteActions %{APPNAME}::Actions() {
     RemoteAction action;
     action.id = QStringLiteral("action1");
     action.text = QStringLiteral("Action 1");
-    action.iconName = QStringLiteral("document-browser");
+    action.iconName = QStringLiteral("documentinfo");
 
     return RemoteActions({action});
 }
@@ -50,9 +51,8 @@ void %{APPNAME}::Run(const QString &id, const QString &actionId) {
 }
 
 int main(int argc, char **argv) {
-    qInfo() << *argv;
     QCoreApplication app(argc, argv);
     %{APPNAME} r;
-    app.exec();
+    QCoreApplication::exec();
 }
 

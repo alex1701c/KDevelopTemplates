@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=DBus runner test
-Comment=DBus runner test
+Name=%{APPNAME}
+Comment=%{APPNAME} KRunner plugin
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=internet-web-browser
-X-KDE-PluginInfo-Author=Some Developer
+X-KDE-PluginInfo-Author=%{AUTHOR}
 X-KDE-PluginInfo-Email=kde@example.com
 X-KDE-PluginInfo-Name=%{APPNAMELC}
 X-KDE-PluginInfo-Version=1.0

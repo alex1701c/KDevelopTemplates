@@ -1,3 +1,4 @@
+//  Licensed under the GNU LESSER GENERAL PUBLIC LICENSE Version 2.1. See License in the project root for license information.
 #pragma once
 
 #include <QList>

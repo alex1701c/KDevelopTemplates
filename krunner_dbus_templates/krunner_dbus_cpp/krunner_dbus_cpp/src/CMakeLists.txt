@@ -7,6 +7,11 @@ target_link_libraries(%{APPNAMELC}
     Qt5::DBus
     KF5::Runner
 )
-# TODO Change
+
+set(CMAKE_BINARY_DIR "../bin")
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+
 install(FILES %{APPNAMELC}.desktop DESTINATION ~/.local/share/kservices5/)
-# TODO Create autostart if release type
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    install(TARGETS %{APPNAMELC} DESTINATION ~/.config/autostart-scripts/)
+endif()
