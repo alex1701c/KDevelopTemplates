@@ -6,6 +6,7 @@
     <kcfgfile arg="true"/>
     <group name="">
         <entry name="example" type="String">
+            <tooltip>Example tooltip (optional)</tooltip>
             <label>Example</label>
             <default>:-)</default>
         </entry>

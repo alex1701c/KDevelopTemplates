@@ -1,0 +1,5 @@
+[General]
+Name=Krunner DBus JavaScript
+Comment=Krunner plugin which uses DBus written in JavaScript
+Category=Plasma/KRunner
+Icon=planetkde

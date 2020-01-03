@@ -1,8 +1,8 @@
 ## %{APPNAME}
 
 This is a KRunner plugin written in C++ and Qt which uses the DBus API.
-It is bases on a test class of the official KRunner project: https://github.com/KDE/krunner/blob/master/autotests/testremoterunner.h  
-For more information and the advantages visit: http://blog.davidedmundson.co.uk/blog/cross-process-runners/
+It is based on a test class of the official KRunner project: https://github.com/KDE/krunner/blob/master/autotests/testremoterunner.h  
+For more information and the advantages of DBus visit: http://blog.davidedmundson.co.uk/blog/cross-process-runners/
 
 ### Required Dependencies
 

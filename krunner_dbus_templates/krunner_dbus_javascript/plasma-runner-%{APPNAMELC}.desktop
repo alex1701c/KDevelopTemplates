@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=%{APPNAME}
+Comment=%{APPNAME} KRunner plugin
+X-KDE-ServiceTypes=Plasma/Runner
+Type=Service
+Icon=planetkde
+X-KDE-PluginInfo-Author=%{AUTHOR}
+X-KDE-PluginInfo-Email=kde@example.com
+X-KDE-PluginInfo-Name=%{APPNAMELC}
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=GPL-3.0
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-API=DBus
+X-Plasma-DBusRunner-Service=net.%{APPNAMELC}2
+X-Plasma-DBusRunner-Path=/%{APPNAMELC}

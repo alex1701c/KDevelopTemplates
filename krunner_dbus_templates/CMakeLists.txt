@@ -14,5 +14,9 @@ set(simple_krunner_python_template_DIRS
 set(modular_krunner_python_template_DIRS
         modular_krunner_python_template
 )
+set(js_runner_template_DIRS
+        krunner_dbus_javascript
+)
 kde_package_app_templates(TEMPLATES ${simple_krunner_python_template_DIRS} INSTALL_DIR ${KDE_INSTALL_KTEMPLATESDIR})
 kde_package_app_templates(TEMPLATES ${modular_krunner_python_template_DIRS} INSTALL_DIR ${KDE_INSTALL_KTEMPLATESDIR})
+kde_package_app_templates(TEMPLATES ${js_runner_template_DIRS} INSTALL_DIR ${KDE_INSTALL_KTEMPLATESDIR})
