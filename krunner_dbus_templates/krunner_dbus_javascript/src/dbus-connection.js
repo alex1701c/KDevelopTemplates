@@ -7,7 +7,7 @@ sessionBus.requestName('net.%{APPNAMELC}2', 0x04, (err, code) => {
     if (err) throw new Error(err);
 
     if (code === 3) throw new Error(`Another instance is already running`);
-    if (code !== 1) throw new Error(`Received code ${code} while requesting service name "opl.KRunnerJSEval"`);
+    if (code !== 1) throw new Error(`Received code ${code} while requesting service name "net.%{APPNAMELC}2"`);
 });
 
 // Interface definition from https://github.com/KDE/krunner/blob/master/src/data/org.kde.krunner1.xml
