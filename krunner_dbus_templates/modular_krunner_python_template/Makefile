@@ -4,6 +4,6 @@ install-dev:
 	kquitapp5 krunner; kstart5 krunner
 install:
 	python3 setup.py install --user
-	make install-dev kdafhdsb
+	make install-dev
 	mkdir -p ~/.config/autostart/
 	cp %{APPNAMELC}/resources/%{APPNAMELC}_autostart.desktop ~/.config/autostart/
