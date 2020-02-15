@@ -1,0 +1,13 @@
+# This Menu will appear for folders
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory
+Actions=DemoMenu
+# Without this line the menu will appear under the actions submenu
+X-KDE-Priority=TopLevel
+
+[Desktop Action DemoMenu]
+Name=Demo Menu
+Icon=planetkde
+Exec=notify-send --icon planetkde "Demo Menu" %u

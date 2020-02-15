@@ -1,0 +1,20 @@
+# This submenu will appear for folders
+[Desktop Entry]
+Type=Service
+MimeType=inode/directory
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+Actions=First;Second
+Icon=planetkde
+X-KDE-Submenu=Demo Submenu
+# Without this line the menu will appear under the actions submenu
+X-KDE-Priority=TopLevel
+
+[Desktop Action First]
+Name=Hello World
+Icon=planetkde
+Exec=notify-send --icon planetkde "Hello World!" %u
+
+[Desktop Action Second]
+Name=Hello There
+Icon=planetkde
+Exec=notify-send --icon planetkde "Hello There!" %u

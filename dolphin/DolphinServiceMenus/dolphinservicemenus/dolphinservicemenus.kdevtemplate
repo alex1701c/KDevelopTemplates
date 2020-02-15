@@ -1,0 +1,5 @@
+[General]
+Name=Dolphin Service Menus
+Comment=Two "Hello World" service menus for dolpin that will help you get started
+Category=Dolphin/ServiceMenu
+Icon=system-file-manager
