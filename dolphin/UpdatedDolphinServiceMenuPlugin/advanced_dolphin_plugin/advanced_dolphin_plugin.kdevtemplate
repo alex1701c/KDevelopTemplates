@@ -1,0 +1,5 @@
+[General]
+Name=Advanced Dolphin C++ Service Menu
+Comment=Dolphin service menu plugin written in C++ with latest Macros and build scripts for binary packages.
+Category=Dolphin/ServiceMenu
+Icon=system-file-manager

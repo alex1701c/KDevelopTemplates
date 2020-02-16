@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Service
+Name=%{APPNAME}
+Icon=planetkde
+X-KDE-ServiceTypes=KFileItemAction/Plugin
+MimeType=inode/directory
+X-KDE-Library=%{APPNAMELC}

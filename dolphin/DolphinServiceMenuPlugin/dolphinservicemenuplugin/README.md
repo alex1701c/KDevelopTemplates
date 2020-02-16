@@ -20,3 +20,5 @@ To create a more optimized release build run instead of
 
 The plugin can be disabled in Configure Dolphin -> Services -> uncheck %{APPNAME} 
 or uninstalled by running `sudo make uninstall` or `sudo ninja uninstall` from the build directory
+
+See https://api.kde.org/frameworks-api/frameworks-apidocs/frameworks/kio/html/classKAbstractFileItemActionPlugin.html for the official docs.
