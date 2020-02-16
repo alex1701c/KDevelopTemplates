@@ -1,0 +1,5 @@
+[General]
+Name=Dolphin C++ Service Menu
+Comment=Dolphin service menu written in C++
+Category=Dolphin/ServiceMenu
+Icon=planetkde
