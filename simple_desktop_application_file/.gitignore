@@ -1,6 +1,0 @@
-/build
-/.idea
-/.vscode
-/cmake-build-debug
-/target
-*.swap

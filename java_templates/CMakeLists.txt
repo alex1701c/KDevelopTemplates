@@ -1,47 +1,14 @@
-cmake_minimum_required(VERSION 3.0)
-
-include(FeatureSummary)
-
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_MODULE_PATH})
-
-include(KDEInstallDirs)
-include(KDEPackageAppTemplates)
-
-set(basic_javafx_template_DIRS
-        basic_javafx_template
-)
-set(javafx_fxml_template_DIRS
-        javafx_fxml_template
-)
-set(java_apache_commons_cli_template_DIRS
-        java_apache_commons_cli_template
-)
-
-set(java_jcommander_cli_template_DIRS
-        java_jcommander_cli_template
-)
-set(java_argparse4j_cli_template_DIRS
-        java_argparse4j_cli_template
-)
-set(javafx_fxml_maven_template_DIRS
-        javafx_fxml_maven_template
-)
-set(javafx_fxml_maven_testfx_template_DIRS
-        javafx_fxml_maven_testfx_template
-)
-set(java_maven_basic_setup_template_DIRS
-        java_maven_basic_setup
-)
-set(java_picocli_cli_template_DIRS
-        java_picocli_cli_template
-)
-set(java_junit5_file_template_DIRS
-        java_junit5_file_template
-)
-set(javafx_maven_build_scripts_DIRS
-        javafx_maven_build_scripts
-)
+set(basic_javafx_template_DIRS basic_javafx_template)
+set(javafx_fxml_template_DIRS javafx_fxml_template)
+set(java_apache_commons_cli_template_DIRS java_apache_commons_cli_template)
+set(java_jcommander_cli_template_DIRS java_jcommander_cli_template)
+set(java_argparse4j_cli_template_DIRS java_argparse4j_cli_template)
+set(javafx_fxml_maven_template_DIRS javafx_fxml_maven_template)
+set(javafx_fxml_maven_testfx_template_DIRS javafx_fxml_maven_testfx_template)
+set(java_maven_basic_setup_template_DIRS java_maven_basic_setup)
+set(java_picocli_cli_template_DIRS java_picocli_cli_template)
+set(java_junit5_file_template_DIRS java_junit5_file_template)
+set(javafx_maven_build_scripts_DIRS javafx_maven_build_scripts)
 
 kde_package_app_templates(TEMPLATES ${basic_javafx_template_DIRS} INSTALL_DIR ${KDE_INSTALL_KTEMPLATESDIR})
 kde_package_app_templates(TEMPLATES ${javafx_fxml_template_DIRS} INSTALL_DIR ${KDE_INSTALL_KTEMPLATESDIR})

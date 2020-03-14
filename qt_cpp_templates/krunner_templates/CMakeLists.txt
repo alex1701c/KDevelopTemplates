@@ -1,0 +1,2 @@
+add_subdirectory(krunner)
+add_subdirectory(runner_kcmodule)

@@ -1,0 +1,2 @@
+add_subdirectory(krunner_templates)
+add_subdirectory(qt_cli_templates)
