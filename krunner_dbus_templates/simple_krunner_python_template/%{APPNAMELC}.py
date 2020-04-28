@@ -23,6 +23,11 @@ class Runner(dbus.service.Object):
             return [("Hello", "Hello from %{APPNAME}!", "document-edit", 100, 1.0, {'subtext': 'Demo Subtext'})]
         return []
 
+    @dbus.service.method(iface, out_signature='a(sss)')
+    def Actions(self):
+        # id, text, icon
+        return [("id", "Tooltip", "planetkde")]
+
     @dbus.service.method(iface, in_signature='ss')
     def Run(self, data: str, _action_id: str):
         print(data)
