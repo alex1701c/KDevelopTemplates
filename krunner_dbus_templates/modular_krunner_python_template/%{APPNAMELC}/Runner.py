@@ -35,6 +35,6 @@ class Runner(dbus.service.Object):
         return [action]
 
     @dbus.service.method(iface, in_signature='ss')
-    def Run(self, data: str, _action_id: str):
-        print(data)
+    def Run(self, data: str, action_id: str):
+        print(data, action_id)
 
