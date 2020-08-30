@@ -1,4 +1,4 @@
-#!/bin/env python3
+#!/usr/bin/python3
 
 import dbus.service
 from dbus.mainloop.glib import DBusGMainLoop
@@ -13,11 +13,11 @@ iface = "org.kde.krunner1"
 
 class Runner(dbus.service.Object):
     def __init__(self):
-        dbus.service.Object.__init__(self, dbus.service.BusName("net.%{APPNAMELC}2", dbus.SessionBus()), objpath)
+        dbus.service.Object.__init__(self, dbus.service.BusName("org.kde.%{APPNAMELC}", dbus.SessionBus()), objpath)
 
     @dbus.service.method(iface, in_signature='s', out_signature='a(sssida{sv})')
     def Match(self, query: str):
-        """This method is used to get the matches and it returns a list of lists/tupels"""
+        """This method is used to get the matches and it returns a list of tupels"""
         if query == "hello":
             # data, display text, icon, type (Plasma::QueryType), relevance (0-1), properties (subtext, category and urls)
             return [("Hello", "Hello from %{APPNAME}!", "document-edit", 100, 1.0, {'subtext': 'Demo Subtext'})]
