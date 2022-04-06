@@ -4,6 +4,7 @@ Comment=%{APPNAME} Runner written in Python
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=planetkde
+X-KDE-PluginInfo-Website=https://example.com/
 X-KDE-PluginInfo-Author=%{AUTHOR}
 X-KDE-PluginInfo-Email=%{EMAIL}
 X-KDE-PluginInfo-Name=%{APPNAMELC}

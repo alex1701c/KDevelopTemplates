@@ -5,6 +5,7 @@ X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=planetkde
 X-KDE-PluginInfo-Author=Some Developer
+X-KDE-PluginInfo-Website=https://example.com/
 X-KDE-PluginInfo-Email=kde@example.com
 X-KDE-PluginInfo-Name=%{APPNAMELC}
 X-KDE-PluginInfo-Version=1.0
